@@ -1,0 +1,36 @@
+// base.less
+//移动端点击高亮
+html,
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);//webkit是苹果浏览器引擎，tap点击，highlight背景高亮，color颜色，颜色用数值调节。
+//在移动端上，有事件监听的元素被点击的时候会被高亮显示，而-webkit-tap-highlight-color属性会在当用户点击iOS的Safari浏览器中的链接或JavaScript的可点击的元素时，覆盖显示的高亮颜色。
+
+}
+input {
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+textarea {
+  border: none;
+  outline: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+li {
+  list-style-type: none;
+}
+//解决端遮罩层穿透
+body.dialog-open {
+  position: fixed;
+  width: 100%;
+}
